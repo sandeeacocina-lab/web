@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Comparativa de IA para generar imágenes con texto — Sandra Mangas</title>
+<meta name="description" content="Pruebo varias herramientas de IA para crear merchandising de nuestra empresa simulada Riberpublic SLS y comparo Leonardo AI, MidJourney y DALL·E.">
+<link rel="canonical" href="https://sandramangas.com/2024/10/26/comparing-ai-tools-for-generating-images-with-text-leonardo-ai-midjourney-and-dall-e/">
+<link rel="alternate" hreflang="es" href="https://sandramangas.com/2024/10/26/comparing-ai-tools-for-generating-images-with-text-leonardo-ai-midjourney-and-dall-e/">
+<link rel="alternate" hreflang="en" href="https://sandramangas.com/2024/10/26/comparing-ai-tools-for-generating-images-with-text-leonardo-ai-midjourney-and-dall-e/">
+<link rel="alternate" hreflang="x-default" href="https://sandramangas.com/2024/10/26/comparing-ai-tools-for-generating-images-with-text-leonardo-ai-midjourney-and-dall-e/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Comparativa de IA para generar imágenes con texto">
+<meta property="og:description" content="Pruebo varias herramientas de IA para crear merchandising de nuestra empresa simulada Riberpublic SLS y comparo Leonardo AI, MidJourney y DALL·E.">
+<meta property="og:url" content="https://sandramangas.com/2024/10/26/comparing-ai-tools-for-generating-images-with-text-leonardo-ai-midjourney-and-dall-e/">
+<meta property="og:site_name" content="Sandra Mangas">
+<meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:image" content="https://sandramangas.com/images/ai-tools.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Comparativa de IA para generar imágenes con texto">
+<meta name="twitter:description" content="Pruebo varias herramientas de IA para crear merchandising de nuestra empresa simulada Riberpublic SLS y comparo Leonardo AI, MidJourney y DALL·E.">
+<meta name="twitter:image" content="https://sandramangas.com/images/ai-tools.jpg">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
+<style>*{box-sizing:border-box}body{margin:0;background:#FBF7EF;color:#33424D;font-family:'Source Sans 3',system-ui,sans-serif;line-height:1.72}
+a{color:#C9485A}
+.wrap{max-width:760px;margin:0 auto;padding:0 24px}
+header.site{border-bottom:1px solid #ECE4D6;background:#FBF7EF}
+.bar{max-width:1100px;margin:0 auto;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{font:700 22px 'Zilla Slab',serif;color:#1F2A30;text-decoration:none;letter-spacing:-.01em}
+.nav{display:flex;gap:22px;font:600 13px 'Source Sans 3',sans-serif;text-transform:uppercase;letter-spacing:.08em}
+.nav a{color:#33424D;text-decoration:none}
+.langtoggle{display:inline-flex;gap:4px;background:#F1ECE0;border-radius:10px;padding:4px;margin:34px 0 6px}
+.langtoggle button{border:none;cursor:pointer;border-radius:7px;padding:7px 16px;font:700 13px 'Source Sans 3',sans-serif;letter-spacing:.04em;background:transparent;color:#7A8790}
+.langtoggle button.on{background:#fff;color:#1F2A30;box-shadow:0 1px 3px rgba(0,0,0,.12)}
+.hero-cover{width:100%;height:auto;display:block;border-radius:14px;margin:18px 0 4px;border:1px solid #ECE4D6}
+.kick{font:700 12px 'Source Sans 3',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#C9485A;margin:8px 0 12px}
+h1.title{font:700 clamp(32px,5vw,52px)/1.05 'Zilla Slab',serif;color:#1F2A30;margin:0 0 14px;letter-spacing:-.01em;text-wrap:balance}
+.meta{font:600 14px 'Source Sans 3',sans-serif;color:#8A97A0;margin:0 0 8px}
+article{font-size:18px}
+article p{margin:0 0 20px}
+article h2{font:700 clamp(24px,3vw,32px)/1.15 'Zilla Slab',serif;color:#1F2A30;margin:38px 0 14px}
+article ul{margin:0 0 20px;padding-left:22px}
+article li{margin:0 0 10px}
+article figure{margin:30px 0}
+article img{max-width:100%;height:auto;display:block;border-radius:12px;border:1px solid #ECE4D6}
+article figcaption{font:400 14px 'Source Sans 3',sans-serif;color:#8A97A0;margin-top:8px;text-align:center}
+blockquote{margin:30px 0;padding:6px 0 6px 24px;border-left:3px solid #E85C6C;font:500 21px/1.5 'Zilla Slab',serif;color:#2B3A42}
+.vid{position:relative;padding-bottom:56.25%;height:0;margin:30px 0;border-radius:12px;overflow:hidden;border:1px solid #ECE4D6;background:#000}
+.vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.embed{margin:30px 0;border-radius:12px;overflow:hidden;border:1px solid #ECE4D6;background:#fff}
+.embed iframe{width:100%;height:100%;border:0;display:block}
+.lang-en{display:none}
+body.show-en .lang-es{display:none}
+body.show-en .lang-en{display:block}
+footer.site{margin-top:70px;border-top:1px solid #ECE4D6;background:#1F2A30;color:#CBD4D8}
+.foot{max-width:1100px;margin:0 auto;padding:34px 24px;display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;font:400 14px 'Source Sans 3',sans-serif}
+.foot a{color:#7FD4DF;text-decoration:none}
+.backlink{display:inline-block;margin:30px 0 0;font:600 15px 'Source Sans 3',sans-serif;color:#1F94A3;text-decoration:none}
+@media(max-width:600px){.nav{gap:14px}article{font-size:17px}}</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Comparando herramientas de IA para generar imágenes: Leonardo AI, MidJourney y DALL·E","description":"Pruebo varias herramientas de IA para crear merchandising de nuestra empresa simulada Riberpublic SLS y comparo Leonardo AI, MidJourney y DALL·E.","datePublished":"2024-10-26T04:25:37Z","dateModified":"2024-10-26T04:25:37Z","inLanguage":"es","mainEntityOfPage":"https://sandramangas.com/2024/10/26/comparing-ai-tools-for-generating-images-with-text-leonardo-ai-midjourney-and-dall-e/","author":{"@type":"Person","name":"Sandra Mangas"},"publisher":{"@type":"Person","name":"Sandra Mangas"},"image":"https://sandramangas.com/images/ai-tools.jpg"}</script>
+</head>
+<body>
+<header class="site"><div class="bar">
+  <a class="brand" href="../../../../">Sandra&nbsp;Mangas</a>
+  <nav class="nav"><a href="../../../../">Inicio</a><a href="../../../../#/blog">Blog</a><a href="../../../../#/about">Sobre mí</a></nav>
+</div></header>
+<main class="wrap">
+  <div class="langtoggle" role="group" aria-label="Idioma / Language">
+    <button type="button" id="btn-es" class="on" onclick="setLang('es')">ES</button>
+    <button type="button" id="btn-en" onclick="setLang('en')">EN</button>
+  </div>
+  <img class="hero-cover" src="../../../../images/ai-tools.jpg" alt="Comparando herramientas de IA para generar imágenes: Leonardo AI, MidJourney y DALL·E">
+  <div class="lang-es">
+    <div class="kick">Blog · Sandra Mangas</div>
+    <h1 class="title">Comparando herramientas de IA para generar imágenes: Leonardo AI, MidJourney y DALL·E</h1>
+    <div class="meta">26 OCT 2024</div>
+    <article><p>Últimamente he estado probando varias herramientas de IA. Quería crear imágenes de merchandising promocional con nuestra empresa simulada, <a href="https://riberpublic.wordpress.com/" target="_blank" rel="noopener">Riberpublic SLS</a>, especializada en publicidad, marketing y merchandising promocional. Mi alumnado necesita crear contenido para las redes sociales, nuestro catálogo y nuestra web, así que usé Leonardo AI, MidJourney y DALL·E (a través de ChatGPT) para ver cuál daba mejores resultados.</p><p>Primero, pedí a ChatGPT que generara varios prompts de imagen, porque no se me da muy bien y la herramienta los crea bastante precisos:</p><blockquote>Una imagen realista que muestre una colección de merchandising promocional —una taza, una camiseta, un cuaderno y una bolsa de tela—, todo con el logo de Riberpublic SLS claramente visible en cada producto, colocado de forma profesional sobre una mesa de madera en un entorno natural y bien iluminado.</blockquote><figure><img src="../../../../images/post/cmp-dalle.jpg" alt="Imagen generada con DALL·E" loading="lazy"><figcaption>Imagen generada con DALL·E</figcaption></figure><h2>DALL·E con ChatGPT</h2><p>DALL·E produjo imágenes bastante coherentes, pero el texto no salió bien; le costó este aspecto. A pesar de muchas instrucciones, no conseguí imágenes realmente realistas: siempre parecían dibujos. Es rápido, pero integrado en ChatGPT dejó bastante que desear (tengo el plan de pago ChatGPT Plus).</p><figure><img src="../../../../images/post/cmp-midjourney.jpg" alt="Imagen generada con MidJourney" loading="lazy"><figcaption>Imagen generada con MidJourney</figcaption></figure><h2>MidJourney</h2><p>MidJourney crea imágenes llamativas para <a href="https://riberpublic.wordpress.com/portfolio/" target="_blank" rel="noopener">el porfolio de Riberpublic</a>, pero no logró incorporar el logo con claridad en los productos. Podría funcionar bien para proyectos más artísticos o creativos, pero no para necesidades de marca concretas como la nuestra; ni siquiera dándole una imagen real del logo funcionó bien. Aun así, usaría MidJourney con confianza para crear rostros, donde realmente destaca.</p><figure><img src="../../../../images/post/cmp-leo1.jpg" alt="Imágenes generadas con Leonardo AI" loading="lazy"><figcaption>Imágenes generadas con Leonardo AI</figcaption></figure><figure><img src="../../../../images/post/cmp-leo2.jpg" alt="" loading="lazy"></figure><figure><img src="../../../../images/post/cmp-leo3.jpg" alt="" loading="lazy"></figure><figure><img src="../../../../images/post/cmp-leo4.jpg" alt="" loading="lazy"></figure><figure><img src="../../../../images/post/cmp-leo5.jpg" alt="" loading="lazy"></figure><figure><img src="../../../../images/post/cmp-leo6.jpg" alt="" loading="lazy"></figure><h2>Leonardo AI: el mejor con diferencia</h2><p>Con el mismo prompt, Leonardo AI fue el único que generó una imagen realista con el texto claramente visible en todos los productos. No es perfecto, pero es bastante preciso, y lo mejor de todo es que es gratis: te da 150 monedas al día para generar imágenes, lo que es perfecto para mi alumnado.</p><p>Tras probar las tres, tengo claro que si necesitas imágenes precisas con texto, Leonardo AI es la opción. Para proyectos más creativos MidJourney sería mi favorito, pero en nuestro caso Leonardo ganó con diferencia.</p></article>
+  </div>
+  <div class="lang-en">
+    <div class="kick">Blog · Sandra Mangas</div>
+    <h1 class="title">Comparing AI tools for generating images: Leonardo AI, MidJourney &amp; DALL·E</h1>
+    <div class="meta">OCT 26, 2024</div>
+    <article><p>I have been trying out various AI tools recently. I wanted to create images of promotional merchandise with our simulated company, <a href="https://riberpublic.wordpress.com/" target="_blank" rel="noopener">Riberpublic SLS</a>, which specializes in advertising, marketing and promotional merchandise. My students need to create content for social media, our catalog and our website, so I used Leonardo AI, MidJourney and DALL·E (via ChatGPT) to see which would give the best results.</p><p>First, I asked ChatGPT to generate several image prompts, because I'm not very good at it and the tool creates quite accurate ones:</p><blockquote>A realistic image showing a collection of promotional merchandise — a mug, T-shirt, notebook and tote bag — all branded with the Riberpublic SLS logo, clearly visible on each product, professionally placed on a wooden table in a natural, well-lit environment.</blockquote><figure><img src="../../../../images/post/cmp-dalle.jpg" alt="Image generated with DALL·E" loading="lazy"><figcaption>Image generated with DALL·E</figcaption></figure><h2>DALL·E with ChatGPT</h2><p>DALL·E produced fairly coherent images, but the text didn't come out well; it struggled with this aspect. Despite many instructions, I couldn't get truly realistic images — they always looked like drawings. It's fast, but integrated into ChatGPT it left a lot to be desired (I have a ChatGPT Plus paid plan).</p><figure><img src="../../../../images/post/cmp-midjourney.jpg" alt="Image generated with MidJourney" loading="lazy"><figcaption>Image generated with MidJourney</figcaption></figure><h2>MidJourney</h2><p>MidJourney creates striking images for <a href="https://riberpublic.wordpress.com/portfolio/" target="_blank" rel="noopener">Riberpublic's portfolio</a>, but it didn't manage to incorporate the logo clearly on the products. It might work well for more artistic or creative projects, but not for specific branding needs like ours; even feeding it an actual image of the logo didn't work well. Still, I'd confidently use MidJourney for creating faces, where it truly excels.</p><figure><img src="../../../../images/post/cmp-leo1.jpg" alt="Images generated with Leonardo AI" loading="lazy"><figcaption>Images generated with Leonardo AI</figcaption></figure><figure><img src="../../../../images/post/cmp-leo2.jpg" alt="" loading="lazy"></figure><figure><img src="../../../../images/post/cmp-leo3.jpg" alt="" loading="lazy"></figure><figure><img src="../../../../images/post/cmp-leo4.jpg" alt="" loading="lazy"></figure><figure><img src="../../../../images/post/cmp-leo5.jpg" alt="" loading="lazy"></figure><figure><img src="../../../../images/post/cmp-leo6.jpg" alt="" loading="lazy"></figure><h2>Leonardo AI: the best by far</h2><p>With the same prompt, Leonardo AI was the only one that generated a realistic image with the text clearly visible on all the products. It's not perfect, but it's quite precise, and best of all it's free — you get 150 coins a day to generate images, which is perfect for my students.</p><p>After testing all three, I'm clear that if you need precise images with text, Leonardo AI is the way to go. For more creative projects MidJourney would be my favorite, but in our case Leonardo won hands down.</p></article>
+  </div>
+  <a class="backlink" href="../../../../#/blog"><span class="lang-es">← Volver al blog</span><span class="lang-en">← Back to the blog</span></a>
+</main>
+<footer class="site"><div class="foot">
+  <span>© Sandra Mangas — Profesora de FP, innovación educativa e IA</span>
+  <span><a href="../../../../">sandramangas.com</a></span>
+</div></footer>
+<script>
+function setLang(l){
+  document.body.classList.toggle('show-en', l==='en');
+  document.documentElement.lang=l;
+  var es=document.getElementById('btn-es'), en=document.getElementById('btn-en');
+  es.classList.toggle('on', l==='es'); en.classList.toggle('on', l==='en');
+  try{ localStorage.setItem('sm-post-lang', l); }catch(e){}
+}
+(function(){ var l='es'; try{ l=localStorage.getItem('sm-post-lang')||'es'; }catch(e){} if(l==='en') setLang('en'); })();
+</script>
+</body>
+</html>
