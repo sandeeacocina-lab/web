@@ -54,11 +54,23 @@ blockquote{margin:30px 0;padding:6px 0 6px 24px;border-left:3px solid #E85C6C;fo
 .lang-en{display:none}
 body.show-en .lang-es{display:none}
 body.show-en .lang-en{display:block}
+.pagenav{margin:52px 0 0;padding-top:28px;border-top:1px solid #E4DBCB;display:flex;gap:16px;justify-content:space-between;flex-wrap:wrap}
+.pagenav a{flex:1 1 240px;display:flex;flex-direction:column;gap:5px;padding:15px 18px;border:1px solid #E4DBCB;border-radius:12px;text-decoration:none;background:#fff}
+.pagenav a.next{align-items:flex-end;text-align:right}
+.pagenav .lbl{font:700 11px 'Source Sans 3',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#C9485A}
+.pagenav .ttl{font:700 16px/1.25 'Zilla Slab',serif;color:#1F94A3}
+.related{margin:46px 0 0}
+.related h3{font:700 12px 'Source Sans 3',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#C9485A;margin:0 0 16px}
+.relgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.relcard{display:flex;flex-direction:column;border:1px solid #ECE4D6;border-radius:12px;overflow:hidden;background:#fff;text-decoration:none}
+.relcard .ph{display:block;aspect-ratio:3/2;background:#ECE4D6 center/cover}
+.relcard .rt{display:block;padding:13px 14px 6px;font:700 15px/1.3 'Zilla Slab',serif;color:#1F2A30}
+.relcard .rd{display:block;padding:0 14px 14px;font:600 12px 'Source Sans 3',sans-serif;color:#A2ACB2}
 footer.site{margin-top:70px;border-top:1px solid #ECE4D6;background:#1F2A30;color:#CBD4D8}
 .foot{max-width:1100px;margin:0 auto;padding:34px 24px;display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;font:400 14px 'Source Sans 3',sans-serif}
 .foot a{color:#7FD4DF;text-decoration:none}
-.backlink{display:inline-block;margin:30px 0 0;font:600 15px 'Source Sans 3',sans-serif;color:#1F94A3;text-decoration:none}
-@media(max-width:600px){.nav{gap:14px}article{font-size:17px}}</style>
+.backlink{display:inline-block;margin:40px 0 0;font:600 15px 'Source Sans 3',sans-serif;color:#1F94A3;text-decoration:none}
+@media(max-width:600px){.nav{gap:14px}article{font-size:17px}.relgrid{grid-template-columns:1fr}}</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Pronunciation Buddy","description":"Un agente de IA personalizado creado con ChatGPT para ayudar a mejorar la pronunciación en inglés de forma amable y efectiva.","datePublished":"2025-05-08T13:31:17Z","dateModified":"2025-05-08T13:31:17Z","inLanguage":"es","mainEntityOfPage":"https://sandramangas.com/2025/05/08/pronounciation-buddy/","author":{"@type":"Person","name":"Sandra Mangas"},"publisher":{"@type":"Person","name":"Sandra Mangas"},"image":"https://sandramangas.com/images/ai-tools.jpg"}</script>
 </head>
 <body>
@@ -84,6 +96,26 @@ footer.site{margin-top:70px;border-top:1px solid #ECE4D6;background:#1F2A30;colo
     <div class="meta">MAY 8, 2025</div>
     <article><figure><img src="../../../../images/post/pb-portrait.png" alt="Image generated with Midjourney v6" loading="lazy"><figcaption>Image generated with Midjourney v6</figcaption></figure><p>As an educator passionate about lifelong learning and innovation, I'm constantly exploring new ways to use technology to improve both my students' skills and my own. Recently, I created a personalized AI agent with ChatGPT called Pronunciation Buddy, designed to help anyone improve their English pronunciation in a friendly and effective way.</p><p>Pronunciation is one of the most challenging aspects of learning a new language. While grammar and vocabulary can be studied alone, pronunciation often requires real-time feedback and repeated practice, and not everyone has access to a native speaker or a tutor. That's where AI can make a difference, and why I built <a href="https://chatgpt.com/g/g-6791f2e9fa448191ba4236d6ee08e243-pronuciation-buddy" target="_blank" rel="noopener">Pronunciation Buddy</a>: a custom ChatGPT agent that helps learners improve their English pronunciation, especially through real-time conversation using Voice Mode.</p><blockquote>Many learners feel embarrassed speaking English in front of others.</blockquote><p>With this agent there's no fear of making mistakes. You can repeat a word ten times, whisper it, shout it, or laugh halfway through, and it will still guide you without pressure. It's completely free and available anytime — practice for five minutes before a meeting or half an hour before bed, with no teacher, class or schedule needed.</p><p>Using Voice Mode changes everything. Instead of typing and reading, you're speaking, listening and interacting in real time, just like with a tutor. That's where Pronunciation Buddy shines. It offers:</p><ul><li>Custom exercises using minimal pairs, tongue twisters and everyday phrases.</li><li>Native-like pronunciation examples.</li><li>Real-time feedback with tips and explanations.</li></ul><p>Like any experiment, it has limitations, especially when switching between languages:</p><ul><li>Strange accent in Spanish: in Voice Mode it often speaks Spanish with an English accent, sometimes making words hard to understand.</li><li>Much better in English-only conversations: switching languages seems to confuse the voice synthesis.</li></ul><p>I created this tool for my own development and to help my students, but I'd love for you to try it too — whether you're a learner, a teacher, or just curious about AI in education. Did it help you speak more clearly? Did you feel more confident? Your feedback will help improve the agent for everyone.</p><blockquote>No more fear. No more waiting. Just you, your voice, and a friendly AI to help you grow. Anytime, anywhere.</blockquote><h2>Appendix: how I trained the agent</h2><p>The agent acts as an English pronunciation coach: it adapts to the user's level (basic, intermediate, advanced), asks for a sample sentence to assess them, and corrects errors with IPA transcription, simple articulation explanations and practical examples to repeat. It drills challenging sounds like /θ/ and the ship/sheep vowel contrast, rhythm and intonation, and everyday sentences for fluency, always giving encouraging feedback. By default it explains in neutral Spanish and switches to native English pronunciation only for the English words and sentences.</p></article>
   </div>
+  <nav class="pagenav"><a class="prev" href="../../../../2024/12/06/aceleradores-de-aprendizaje/">
+      <span class="lbl"><span class="lang-es">← Anterior</span><span class="lang-en">← Previous</span></span>
+      <span class="ttl"><span class="lang-es">Learning Accelerators</span><span class="lang-en">Learning Accelerators</span></span>
+    </a><a class="next" href="../../../../2025/10/07/nueva-empresa-simulada-tastybox/">
+      <span class="lbl"><span class="lang-es">Siguiente →</span><span class="lang-en">Next →</span></span>
+      <span class="ttl"><span class="lang-es">Nueva empresa simulada: TastyBox</span><span class="lang-en">A new simulated company: TastyBox</span></span>
+    </a></nav>
+  <section class="related"><h3><span class="lang-es">Artículos relacionados</span><span class="lang-en">Related posts</span></h3><div class="relgrid"><a class="relcard" href="../../../../2024/12/06/aceleradores-de-aprendizaje/">
+        <span class="ph" style="background-image:url('../../../../images/post/la-hero-warm.jpg')"></span>
+        <span class="rt"><span class="lang-es">Learning Accelerators</span><span class="lang-en">Learning Accelerators</span></span>
+        <span class="rd"><span class="lang-es">6 DIC 2024</span><span class="lang-en">DEC 6, 2024</span></span>
+      </a><a class="relcard" href="../../../../2024/10/26/comparing-ai-tools-for-generating-images-with-text-leonardo-ai-midjourney-and-dall-e/">
+        <span class="ph" style="background-image:url('../../../../images/ai-tools.jpg')"></span>
+        <span class="rt"><span class="lang-es">Comparando herramientas de IA para generar imágenes: Leonardo AI, MidJourney y DALL·E</span><span class="lang-en">Comparing AI tools for generating images: Leonardo AI, MidJourney &amp; DALL·E</span></span>
+        <span class="rd"><span class="lang-es">26 OCT 2024</span><span class="lang-en">OCT 26, 2024</span></span>
+      </a><a class="relcard" href="../../../../2024/10/14/mi-nivel-de-competencia-digital-docente/">
+        <span class="ph" style="background-image:url('../../../../images/digital.jpg')"></span>
+        <span class="rt"><span class="lang-es">Mi nivel de competencia digital docente</span><span class="lang-en">My level of digital teaching competence</span></span>
+        <span class="rd"><span class="lang-es">14 OCT 2024</span><span class="lang-en">OCT 14, 2024</span></span>
+      </a></div></section>
   <a class="backlink" href="../../../../#/blog"><span class="lang-es">← Volver al blog</span><span class="lang-en">← Back to the blog</span></a>
 </main>
 <footer class="site"><div class="foot">
@@ -98,11 +130,7 @@ function setLang(l){
   es.classList.toggle('on', l==='es'); en.classList.toggle('on', l==='en');
   try{ localStorage.setItem('sm-post-lang', l); }catch(e){}
 }
-(function(){
-  var l='es';
-  try{ l=localStorage.getItem('sm-post-lang')||'es'; }catch(e){}
-  if(l==='en') setLang('en');
-})();
+(function(){ var l='es'; try{ l=localStorage.getItem('sm-post-lang')||'es'; }catch(e){} if(l==='en') setLang('en'); })();
 </script>
 </body>
 </html>

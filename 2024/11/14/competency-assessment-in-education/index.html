@@ -54,11 +54,23 @@ blockquote{margin:30px 0;padding:6px 0 6px 24px;border-left:3px solid #E85C6C;fo
 .lang-en{display:none}
 body.show-en .lang-es{display:none}
 body.show-en .lang-en{display:block}
+.pagenav{margin:52px 0 0;padding-top:28px;border-top:1px solid #E4DBCB;display:flex;gap:16px;justify-content:space-between;flex-wrap:wrap}
+.pagenav a{flex:1 1 240px;display:flex;flex-direction:column;gap:5px;padding:15px 18px;border:1px solid #E4DBCB;border-radius:12px;text-decoration:none;background:#fff}
+.pagenav a.next{align-items:flex-end;text-align:right}
+.pagenav .lbl{font:700 11px 'Source Sans 3',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#C9485A}
+.pagenav .ttl{font:700 16px/1.25 'Zilla Slab',serif;color:#1F94A3}
+.related{margin:46px 0 0}
+.related h3{font:700 12px 'Source Sans 3',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#C9485A;margin:0 0 16px}
+.relgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.relcard{display:flex;flex-direction:column;border:1px solid #ECE4D6;border-radius:12px;overflow:hidden;background:#fff;text-decoration:none}
+.relcard .ph{display:block;aspect-ratio:3/2;background:#ECE4D6 center/cover}
+.relcard .rt{display:block;padding:13px 14px 6px;font:700 15px/1.3 'Zilla Slab',serif;color:#1F2A30}
+.relcard .rd{display:block;padding:0 14px 14px;font:600 12px 'Source Sans 3',sans-serif;color:#A2ACB2}
 footer.site{margin-top:70px;border-top:1px solid #ECE4D6;background:#1F2A30;color:#CBD4D8}
 .foot{max-width:1100px;margin:0 auto;padding:34px 24px;display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;font:400 14px 'Source Sans 3',sans-serif}
 .foot a{color:#7FD4DF;text-decoration:none}
-.backlink{display:inline-block;margin:30px 0 0;font:600 15px 'Source Sans 3',sans-serif;color:#1F94A3;text-decoration:none}
-@media(max-width:600px){.nav{gap:14px}article{font-size:17px}}</style>
+.backlink{display:inline-block;margin:40px 0 0;font:600 15px 'Source Sans 3',sans-serif;color:#1F94A3;text-decoration:none}
+@media(max-width:600px){.nav{gap:14px}article{font-size:17px}.relgrid{grid-template-columns:1fr}}</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Evaluación por competencias en educación","description":"La evaluación por competencias es un reto complejo que exige transformar la metodología docente. La LOMLOE obliga a evaluar las competencias clave en todos los niveles.","datePublished":"2024-11-14T14:20:00Z","dateModified":"2024-11-14T14:20:00Z","inLanguage":"es","mainEntityOfPage":"https://sandramangas.com/2024/11/14/competency-assessment-in-education/","author":{"@type":"Person","name":"Sandra Mangas"},"publisher":{"@type":"Person","name":"Sandra Mangas"},"image":"https://sandramangas.com/images/post/comp-hero-warm.jpg"}</script>
 </head>
 <body>
@@ -84,6 +96,26 @@ footer.site{margin-top:70px;border-top:1px solid #ECE4D6;background:#1F2A30;colo
     <div class="meta">NOV 14, 2024</div>
     <article><p>Competency assessment in education is a complex challenge that requires a deep transformation in teaching and assessment methodologies. Current educational regulations in Spain, specifically Organic Law 3/2020 (LOMLOE), mandate the assessment of key competencies at all educational levels.</p><p>In practice, however, many teachers continue using traditional methods such as conventional exams and assignments, and later translate the resulting grades into competencies using digital tools like Additio or iDoceo. This approach may be insufficient, since students often lack the real opportunity to develop, understand or apply the competencies they are expected to acquire — in many cases they are not even aware of what these competencies are.</p><p>A simple test illustrates this: ask secondary students directly whether they know which competencies they need to develop and how these relate to their daily learning. Many will struggle to answer clearly, revealing a disconnect between the regulatory goals and actual practice.</p><p>Competency assessment needs to go beyond merely translating traditional grades. A cultural shift is required to promote active, participative methodologies where students are aware of the competencies they are developing and have genuine opportunities to practice and reflect on them.</p><p>Simulation-based learning lets students experience realistic work scenarios within a safe, controlled environment. They take on roles within a virtual business setting, managing everything from project planning to strategic decision-making, which reproduces the dynamics and challenges of the workplace.</p><figure><img src="../../../../images/post/comp-students.jpg" alt="" loading="lazy"></figure><p>A key aspect is active learning: students not only acquire theoretical knowledge but apply it directly to real situations — solving problems, collaborating with teammates and adapting to different roles and departments.</p><p>Because the conventional approach of assigning grades does not fully capture students' progress, I have implemented an assessment system that goes beyond grades, focusing on each student's personal growth and using the EntreComp framework to develop entrepreneurial skills.</p><h2>Phases of competency assessment</h2><div class="vid"><iframe src="https://www.youtube-nocookie.com/embed/OCk4MlFed8Y?rel=0" loading="lazy" allowfullscreen frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe></div><p>In the simulated business, assessment is organized into three phases. The initial assessment places students in the context of the competencies they are expected to develop, establishing a starting point. The formative assessment, applied throughout the course as simulated performance reviews, guides learning in real time with personalized feedback from the students themselves, their peers and the teaching team. The final assessment is a performance review where each student reflects on achievements and areas for improvement and builds an action plan.</p><h2>Assessment tool: CoRubrics</h2><p>To structure assessment I use CoRubrics, a Google Sheets add-on that manages assessment rubrics based on the EntreComp competencies. It supports self-assessment, peer assessment and teacher evaluation, and its automated process sends detailed, personalized feedback to each student.</p><div class="vid"><iframe src="https://videopress.com/embed/IR5ash2W" loading="lazy" allowfullscreen frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe></div><h2>Learning journal</h2><p>Each student also keeps a digital learning journal compiling evidence of the competencies they believe they have developed. It is a valuable tool for self-reflection and during the monthly performance evaluations, especially when there are discrepancies between self-assessment and other assessors.</p><figure><img src="../../../../images/post/comp-journal.jpg" alt="Learning journal example" loading="lazy"><figcaption>Learning journal example</figcaption></figure><blockquote>Assessing competencies in a simulated business environment is a challenge that requires creativity and commitment from all stakeholders.</blockquote><p>Simulation-based learning offers a unique opportunity to teach competencies actively, but to leverage it fully we need assessment methods that reflect the dynamic, practical nature of this learning. You can find my evaluation resources <a href="https://drive.google.com/drive/folders/1eM-Cho8V5Xx4jHG1Oj_WY4Iv50tagyPm?usp=drive_link" target="_blank" rel="noopener">in this folder</a>.</p></article>
   </div>
+  <nav class="pagenav"><a class="prev" href="../../../../2024/10/30/sostenibilidad-en-el-aula-de-fp/">
+      <span class="lbl"><span class="lang-es">← Anterior</span><span class="lang-en">← Previous</span></span>
+      <span class="ttl"><span class="lang-es">Sostenibilidad en el aula de FP</span><span class="lang-en">Sustainability in the VET classroom</span></span>
+    </a><a class="next" href="../../../../2024/12/06/aceleradores-de-aprendizaje/">
+      <span class="lbl"><span class="lang-es">Siguiente →</span><span class="lang-en">Next →</span></span>
+      <span class="ttl"><span class="lang-es">Learning Accelerators</span><span class="lang-en">Learning Accelerators</span></span>
+    </a></nav>
+  <section class="related"><h3><span class="lang-es">Artículos relacionados</span><span class="lang-en">Related posts</span></h3><div class="relgrid"><a class="relcard" href="../../../../2022/07/12/entrecomp-evaluation-sheets/">
+        <span class="ph" style="background-image:url('../../../../images/committee.jpg')"></span>
+        <span class="rt"><span class="lang-es">Fichas de evaluación EntreComp</span><span class="lang-en">EntreComp Evaluation Sheets</span></span>
+        <span class="rd"><span class="lang-es">12 JUL 2022</span><span class="lang-en">JUL 12, 2022</span></span>
+      </a><a class="relcard" href="../../../../2025/10/07/nueva-empresa-simulada-tastybox/">
+        <span class="ph" style="background-image:url('../../../../images/tastybox.jpg')"></span>
+        <span class="rt"><span class="lang-es">Nueva empresa simulada: TastyBox</span><span class="lang-en">A new simulated company: TastyBox</span></span>
+        <span class="rd"><span class="lang-es">7 OCT 2025</span><span class="lang-en">OCT 7, 2025</span></span>
+      </a><a class="relcard" href="../../../../2024/10/30/sostenibilidad-en-el-aula-de-fp/">
+        <span class="ph" style="background-image:url('../../../../images/sustainability.jpg')"></span>
+        <span class="rt"><span class="lang-es">Sostenibilidad en el aula de FP</span><span class="lang-en">Sustainability in the VET classroom</span></span>
+        <span class="rd"><span class="lang-es">30 OCT 2024</span><span class="lang-en">OCT 30, 2024</span></span>
+      </a></div></section>
   <a class="backlink" href="../../../../#/blog"><span class="lang-es">← Volver al blog</span><span class="lang-en">← Back to the blog</span></a>
 </main>
 <footer class="site"><div class="foot">
@@ -98,11 +130,7 @@ function setLang(l){
   es.classList.toggle('on', l==='es'); en.classList.toggle('on', l==='en');
   try{ localStorage.setItem('sm-post-lang', l); }catch(e){}
 }
-(function(){
-  var l='es';
-  try{ l=localStorage.getItem('sm-post-lang')||'es'; }catch(e){}
-  if(l==='en') setLang('en');
-})();
+(function(){ var l='es'; try{ l=localStorage.getItem('sm-post-lang')||'es'; }catch(e){} if(l==='en') setLang('en'); })();
 </script>
 </body>
 </html>

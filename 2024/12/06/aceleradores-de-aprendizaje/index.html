@@ -54,11 +54,23 @@ blockquote{margin:30px 0;padding:6px 0 6px 24px;border-left:3px solid #E85C6C;fo
 .lang-en{display:none}
 body.show-en .lang-es{display:none}
 body.show-en .lang-en{display:block}
+.pagenav{margin:52px 0 0;padding-top:28px;border-top:1px solid #E4DBCB;display:flex;gap:16px;justify-content:space-between;flex-wrap:wrap}
+.pagenav a{flex:1 1 240px;display:flex;flex-direction:column;gap:5px;padding:15px 18px;border:1px solid #E4DBCB;border-radius:12px;text-decoration:none;background:#fff}
+.pagenav a.next{align-items:flex-end;text-align:right}
+.pagenav .lbl{font:700 11px 'Source Sans 3',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#C9485A}
+.pagenav .ttl{font:700 16px/1.25 'Zilla Slab',serif;color:#1F94A3}
+.related{margin:46px 0 0}
+.related h3{font:700 12px 'Source Sans 3',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#C9485A;margin:0 0 16px}
+.relgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.relcard{display:flex;flex-direction:column;border:1px solid #ECE4D6;border-radius:12px;overflow:hidden;background:#fff;text-decoration:none}
+.relcard .ph{display:block;aspect-ratio:3/2;background:#ECE4D6 center/cover}
+.relcard .rt{display:block;padding:13px 14px 6px;font:700 15px/1.3 'Zilla Slab',serif;color:#1F2A30}
+.relcard .rd{display:block;padding:0 14px 14px;font:600 12px 'Source Sans 3',sans-serif;color:#A2ACB2}
 footer.site{margin-top:70px;border-top:1px solid #ECE4D6;background:#1F2A30;color:#CBD4D8}
 .foot{max-width:1100px;margin:0 auto;padding:34px 24px;display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;font:400 14px 'Source Sans 3',sans-serif}
 .foot a{color:#7FD4DF;text-decoration:none}
-.backlink{display:inline-block;margin:30px 0 0;font:600 15px 'Source Sans 3',sans-serif;color:#1F94A3;text-decoration:none}
-@media(max-width:600px){.nav{gap:14px}article{font-size:17px}}</style>
+.backlink{display:inline-block;margin:40px 0 0;font:600 15px 'Source Sans 3',sans-serif;color:#1F94A3;text-decoration:none}
+@media(max-width:600px){.nav{gap:14px}article{font-size:17px}.relgrid{grid-template-columns:1fr}}</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Learning Accelerators","description":"Probando los Learning Accelerators de Microsoft 365 Education en MS Teams: creación, revisión y análisis de tareas con feedback en tiempo real.","datePublished":"2024-12-06T08:24:01Z","dateModified":"2024-12-06T08:24:01Z","inLanguage":"es","mainEntityOfPage":"https://sandramangas.com/2024/12/06/aceleradores-de-aprendizaje/","author":{"@type":"Person","name":"Sandra Mangas"},"publisher":{"@type":"Person","name":"Sandra Mangas"},"image":"https://sandramangas.com/images/post/la-hero-warm.jpg"}</script>
 </head>
 <body>
@@ -84,6 +96,26 @@ footer.site{margin-top:70px;border-top:1px solid #ECE4D6;background:#1F2A30;colo
     <div class="meta">DEC 6, 2024</div>
     <article><p>These days, I've been testing the new Learning Accelerators in MS Teams. Microsoft's Learning Accelerators are an innovative category of tools integrated into Microsoft 365 Education, designed to facilitate the creation, review and analysis of tasks while providing students with real-time feedback. This could make them an inclusive, ideal tool for empowering students.</p><p>Tools like Reading Progress and Speaker Progress are presented as innovative solutions for developing key skills, but how effective are they really? After testing both, it's clear that while they offer value, they also face significant challenges that limit their practical impact.</p><h2>Reading Progress</h2><p>Reading Progress lets teachers assign reading passages for students to read aloud and receive automatic reports evaluating pronunciation accuracy, expression and reading comprehension. Its goal is to reduce teachers' workload and let students improve their pronunciation and comprehension, with the flexibility to repeat the reading as many times as the teacher allows.</p><p>The main limitation I noticed is that the texts generated for certain age groups seem overly complex; I don't think the AI adjusts the difficulty level well. Despite this, Reading Progress is useful as a complementary tool: it enables quick, large-scale evaluations and helps identify students who may need more personalized attention. So far I've only tested it myself, taking on both the student and teacher roles.</p><div class="vid"><iframe src="https://videopress.com/embed/95o5WXwG" loading="lazy" allowfullscreen frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe></div><h2>Speaker Progress</h2><p>I then tried Speaker Progress, designed to help students develop presentation and public-speaking skills. It provides automatic feedback on technical aspects like pacing, filler words and speech clarity. Since my students were preparing to present our simulated company, Riberpublic SLS, at a business fair, I assigned them a task using Speaker Coach to practice their sales pitch.</p><p>After testing it I noticed several important limitations: it doesn't detect when students are reading their speech, it doesn't evaluate whether they are looking at the camera, and the AI-generated evaluations were consistently very positive even when the speeches needed significant improvement.</p><div class="vid"><iframe src="https://videopress.com/embed/K5ybtkhe" loading="lazy" allowfullscreen frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe></div><p>Here's an example of a report Speaker Coach gave one of my students. They uploaded an audio-only video and were clearly reading most of the text, stumbling over words and using filler and repetitive language — yet the report stayed upbeat.</p><figure><img src="../../../../images/post/la-report1.jpg" alt="" loading="lazy"></figure><figure><img src="../../../../images/post/la-report2.jpg" alt="" loading="lazy"></figure><p>Despite these limitations, Speaker Coach is a great starting point for practicing public speaking in a low-pressure environment: students can observe themselves and repeat the task until satisfied. As someone who hates public speaking, I find tools that let you practice in advance incredibly helpful. Still, it cannot replace personalized evaluation from a teacher, and its reports are currently unreliable.</p><p>In conclusion, both Reading Progress and Speaker Coach have the potential to assist teachers and empower students, but they still have notable limitations. With further development they could become more valuable; for now they should be seen as complementary aids rather than comprehensive solutions.</p></article>
   </div>
+  <nav class="pagenav"><a class="prev" href="../../../../2024/11/14/competency-assessment-in-education/">
+      <span class="lbl"><span class="lang-es">← Anterior</span><span class="lang-en">← Previous</span></span>
+      <span class="ttl"><span class="lang-es">Evaluación por competencias en educación</span><span class="lang-en">Competency assessment in education</span></span>
+    </a><a class="next" href="../../../../2025/05/08/pronounciation-buddy/">
+      <span class="lbl"><span class="lang-es">Siguiente →</span><span class="lang-en">Next →</span></span>
+      <span class="ttl"><span class="lang-es">Pronunciation Buddy</span><span class="lang-en">Pronunciation Buddy</span></span>
+    </a></nav>
+  <section class="related"><h3><span class="lang-es">Artículos relacionados</span><span class="lang-en">Related posts</span></h3><div class="relgrid"><a class="relcard" href="../../../../2024/10/14/mi-nivel-de-competencia-digital-docente/">
+        <span class="ph" style="background-image:url('../../../../images/digital.jpg')"></span>
+        <span class="rt"><span class="lang-es">Mi nivel de competencia digital docente</span><span class="lang-en">My level of digital teaching competence</span></span>
+        <span class="rd"><span class="lang-es">14 OCT 2024</span><span class="lang-en">OCT 14, 2024</span></span>
+      </a><a class="relcard" href="../../../../2025/05/08/pronounciation-buddy/">
+        <span class="ph" style="background-image:url('../../../../images/ai-tools.jpg')"></span>
+        <span class="rt"><span class="lang-es">Pronunciation Buddy</span><span class="lang-en">Pronunciation Buddy</span></span>
+        <span class="rd"><span class="lang-es">8 MAY 2025</span><span class="lang-en">MAY 8, 2025</span></span>
+      </a><a class="relcard" href="../../../../2024/10/26/comparing-ai-tools-for-generating-images-with-text-leonardo-ai-midjourney-and-dall-e/">
+        <span class="ph" style="background-image:url('../../../../images/ai-tools.jpg')"></span>
+        <span class="rt"><span class="lang-es">Comparando herramientas de IA para generar imágenes: Leonardo AI, MidJourney y DALL·E</span><span class="lang-en">Comparing AI tools for generating images: Leonardo AI, MidJourney &amp; DALL·E</span></span>
+        <span class="rd"><span class="lang-es">26 OCT 2024</span><span class="lang-en">OCT 26, 2024</span></span>
+      </a></div></section>
   <a class="backlink" href="../../../../#/blog"><span class="lang-es">← Volver al blog</span><span class="lang-en">← Back to the blog</span></a>
 </main>
 <footer class="site"><div class="foot">
@@ -98,11 +130,7 @@ function setLang(l){
   es.classList.toggle('on', l==='es'); en.classList.toggle('on', l==='en');
   try{ localStorage.setItem('sm-post-lang', l); }catch(e){}
 }
-(function(){
-  var l='es';
-  try{ l=localStorage.getItem('sm-post-lang')||'es'; }catch(e){}
-  if(l==='en') setLang('en');
-})();
+(function(){ var l='es'; try{ l=localStorage.getItem('sm-post-lang')||'es'; }catch(e){} if(l==='en') setLang('en'); })();
 </script>
 </body>
 </html>
