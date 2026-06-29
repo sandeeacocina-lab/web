@@ -317,7 +317,7 @@
 
     <!-- PULL QUOTE -->
     <div class="sm-gut" style="max-width:1120px;margin:0 auto;padding:48px 32px;">
-      <a class="sm-reveal" href="#/post/competency-assessment" style="display:block;border-top:2px solid #E85C6C;border-bottom:2px solid #E85C6C;padding:34px 0;text-align:center;text-decoration:none;cursor:pointer;">
+      <a class="sm-reveal" href="/2024/11/14/competency-assessment-in-education/" style="display:block;border-top:2px solid #E85C6C;border-bottom:2px solid #E85C6C;padding:34px 0;text-align:center;text-decoration:none;cursor:pointer;">
         <p style="margin:0 auto;max-width:22ch;font:700 italic clamp(28px,4vw,46px)/1.18 'Zilla Slab',serif;color:#E85C6C;">{{ t.quote }}</p>
         <div style="margin-top:16px;font:600 13px 'Source Sans 3',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#7A8893;">{{ t.quoteAttr }}</div>
       </a>
@@ -331,7 +331,7 @@
       </div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:36px 32px;">
         <sc-for list="{{ latest }}" as="a" hint-placeholder-count="6">
-          <a href="#/post/{{ a.slug }}" class="sm-reveal sm-card" style="display:block;text-decoration:none;color:inherit;background:#FFFFFF;border:1px solid #E7EFF2;border-radius:14px;overflow:hidden;cursor:pointer;">
+          <a href="{{ a.permalink }}" class="sm-reveal sm-card" style="display:block;text-decoration:none;color:inherit;background:#FFFFFF;border:1px solid #E7EFF2;border-radius:14px;overflow:hidden;cursor:pointer;">
             <div class="sm-img" style="position:relative;aspect-ratio:3/2;border-bottom:1px solid #EDF3F5;">
               <img class="sm-zoom" src="{{ a.img }}" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:none;">
             </div>
@@ -383,7 +383,7 @@
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:36px 32px;">
       <sc-for list="{{ posts }}" as="a" hint-placeholder-count="9">
-        <a href="#/post/{{ a.slug }}" class="sm-reveal sm-card" style="display:block;text-decoration:none;color:inherit;background:#FFFFFF;border:1px solid #E7EFF2;border-radius:14px;overflow:hidden;cursor:pointer;">
+        <a href="{{ a.permalink }}" class="sm-reveal sm-card" style="display:block;text-decoration:none;color:inherit;background:#FFFFFF;border:1px solid #E7EFF2;border-radius:14px;overflow:hidden;cursor:pointer;">
           <div class="sm-img" style="position:relative;aspect-ratio:3/2;border-bottom:1px solid #EDF3F5;">
             <img class="sm-zoom" src="{{ a.img }}" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:none;">
           </div>
@@ -415,7 +415,7 @@
     </sc-if>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:36px 32px;">
       <sc-for list="{{ filtered }}" as="a" hint-placeholder-count="6">
-        <a href="#/post/{{ a.slug }}" class="sm-reveal sm-card" style="display:block;text-decoration:none;color:inherit;background:#FFFFFF;border:1px solid #E7EFF2;border-radius:14px;overflow:hidden;cursor:pointer;">
+        <a href="{{ a.permalink }}" class="sm-reveal sm-card" style="display:block;text-decoration:none;color:inherit;background:#FFFFFF;border:1px solid #E7EFF2;border-radius:14px;overflow:hidden;cursor:pointer;">
           <div class="sm-img" style="position:relative;aspect-ratio:3/2;border-bottom:1px solid #EDF3F5;">
             <img class="sm-zoom" src="{{ a.img }}" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:none;">
           </div>
@@ -447,13 +447,13 @@
     </sc-if>
     <nav style="margin-top:56px;padding-top:28px;border-top:1px solid #E7EFF2;display:flex;gap:18px;justify-content:space-between;align-items:stretch;flex-wrap:wrap;">
       <sc-if value="{{ post.hasOlder }}" hint-placeholder-val="{{ false }}">
-        <a href="#/post/{{ post.olderSlug }}" class="sm-side" style="text-decoration:none;color:inherit;flex:1 1 220px;display:flex;flex-direction:column;gap:6px;padding:15px 17px;border:1px solid #E7EFF2;border-radius:12px;">
+        <a href="{{ post.olderPermalink }}" class="sm-side" style="text-decoration:none;color:inherit;flex:1 1 220px;display:flex;flex-direction:column;gap:6px;padding:15px 17px;border:1px solid #E7EFF2;border-radius:12px;">
           <span style="font:700 11px 'Source Sans 3',sans-serif;letter-spacing:.16em;color:#E85C6C;">← {{ t.prevLabel }}</span>
           <span style="font:700 17px/1.25 'Zilla Slab',serif;color:#1F94A3;">{{ post.olderTitle }}</span>
         </a>
       </sc-if>
       <sc-if value="{{ post.hasNewer }}" hint-placeholder-val="{{ false }}">
-        <a href="#/post/{{ post.newerSlug }}" class="sm-side" style="text-decoration:none;color:inherit;flex:1 1 220px;margin-left:auto;display:flex;flex-direction:column;gap:6px;padding:15px 17px;border:1px solid #E7EFF2;border-radius:12px;text-align:right;">
+        <a href="{{ post.newerPermalink }}" class="sm-side" style="text-decoration:none;color:inherit;flex:1 1 220px;margin-left:auto;display:flex;flex-direction:column;gap:6px;padding:15px 17px;border:1px solid #E7EFF2;border-radius:12px;text-align:right;">
           <span style="font:700 11px 'Source Sans 3',sans-serif;letter-spacing:.16em;color:#E85C6C;">{{ t.nextLabel }} →</span>
           <span style="font:700 17px/1.25 'Zilla Slab',serif;color:#1F94A3;">{{ post.newerTitle }}</span>
         </a>
@@ -463,7 +463,7 @@
       <div style="font:700 13px 'Source Sans 3',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#7A8893;margin-bottom:18px;">{{ t.relatedLabel }}</div>
       <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:18px;">
         <sc-for list="{{ post.related }}" as="r" hint-placeholder-count="3">
-          <a href="#/post/{{ r.slug }}" class="sm-reveal sm-card" style="display:block;text-decoration:none;color:inherit;background:#FFFFFF;border:1px solid #E7EFF2;border-radius:14px;overflow:hidden;">
+          <a href="{{ r.permalink }}" class="sm-reveal sm-card" style="display:block;text-decoration:none;color:inherit;background:#FFFFFF;border:1px solid #E7EFF2;border-radius:14px;overflow:hidden;">
             <div class="sm-img" style="position:relative;aspect-ratio:3/2;border-bottom:1px solid #EDF3F5;">
               <img class="sm-zoom" src="{{ r.img }}" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:none;">
             </div>
@@ -632,6 +632,7 @@
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script>
+const PERMA = {"evaluar-con-ia":"/2026/06/09/evaluar-con-ia/","tastybox":"/2025/10/07/nueva-empresa-simulada-tastybox/","pronunciation-buddy":"/2025/05/08/pronounciation-buddy/","learning-accelerators":"/2024/12/06/aceleradores-de-aprendizaje/","competency-assessment":"/2024/11/14/competency-assessment-in-education/","sostenibilidad-fp":"/2024/10/30/sostenibilidad-en-el-aula-de-fp/","comparing-ai-image-tools":"/2024/10/26/comparing-ai-tools-for-generating-images-with-text-leonardo-ai-midjourney-and-dall-e/","videos-canva-d-id":"/2024/10/23/crea-videos-profesionales-rapido-con-canva-y-d-id/","videos-ia-gratis":"/2024/10/22/crea-videos-profesionales-gratis-rapidamente/","competencia-digital-docente":"/2024/10/14/mi-nivel-de-competencia-digital-docente/","empowering-learning-ai":"/2024/10/11/empowering-learning-with-ai-my-so-far-short-experience-in-the-classroom/","analisis-mercado":"/2024/10/10/guia-para-el-analisis-de-mercado-en-planes-de-empresa/","presentacion-empresa-simulada":"/2024/10/04/presentacion-empresa-simulada/","primera-parte-plan-empresa":"/2024/09/23/primera-parte-del-plan-de-empresa/","epale-interview":"/2020/03/15/cv-vs-resume/","entrecomp-champion":"/2023/06/15/entrecomp-champion/","entrecomp-mnemos":"/2023/06/13/entrecomp-en-accion-el-proyecto-mnemos/","digitalisation-vet":"/2023/04/29/digitalizacion/","entrecomp-evaluation-sheets":"/2022/07/12/entrecomp-evaluation-sheets/","entrepreneurial-classroom-activities":"/2022/07/10/entrepreneurial-classroom-activities/","practice-enterprise-fair-arcadeca":"/2022/04/01/practice-enterprise-fair-arcadeca/","entrepreneurship-at-ies-arca-real":"/2022/03/31/entrepreneurship-at-ies-arca-real/","learning-and-skills-virtual-practice-firm":"/2022/03/31/learning-and-skills-training-in-a-virtual-practice-firm/","expods":"/2022/03/31/expods/","entrepreneurial-classroom":"/2022/03/29/entrepreneurial-classroom/","hr-management-game":"/2022/03/27/hr-management-game/","hr-provision-presentation":"/2022/03/27/hr-provision-presentation/","hr-planning-presentation":"/2022/03/03/hr-planning-presentation/","human-resources-management-presentation":"/2021/11/21/human-resources-management-presentation-2/","business-ethics-game":"/2021/11/21/business-ethics-game/","corporate-social-responsibility-presentation":"/2021/11/21/corporate-social-responsibility-presentation/","evaluacion-0":"/2021/10/16/evaluacion-0/","be-a-great-interviewer":"/2021/06/08/be-a-great-interviewer/","resume-screening-guide":"/2021/04/23/resume-screening-guide/","we-are-hiring":"/2021/03/23/we-are-hiring/","te-estamos-buscando":"/2021/03/15/te-estamos-buscando/","teaching-digital-skills":"/2016/10/27/unit-7-candidates-selection-process-interview-questions/","a-peculiar-job-interview":"/2020/05/03/a-peculiar-job-interview/","interview-questions-and-answers":"/2020/04/16/interview-questions-and-answers/","resume-selection-process":"/2020/03/25/resume-selection-process/","comentario-critico-de-cv":"/2020/03/24/comentario-critico-de-cv/","como-preparar-un-cv-ganador":"/2020/03/18/como-preparar-un-cv-ganador/","job-ad-vs-job-description":"/2020/02/06/job-ad-vs-job-description/","staff-turnover-definition-in-images":"/2019/12/11/staff-turnover-definition-in-images/","elements-of-non-verbal-communication":"/2019/11/21/elements-of-non-verbal-communication/","for-the-birds-non-verbal-communication":"/2019/10/22/for-the-birds-non-verbal-communication/","human-resources-management-introduction":"/2019/10/15/human-resources-management-introduction/","now-it-is-your-turn-to-evaluate-my-performance":"/2019/10/07/now-it-is-your-turn-to-evaluate-my-performance/","human-resources-and-corporate-social-responsibility-presentation":"/2019/09/24/human-resources-and-corporate-social-responsibility-presentation/","millenial-job-interview":"/2019/09/13/millenial-job-interview/","corporate-social-responsibility-basics":"/2019/09/13/corporate-social-responsibility-basics/","what-is-business-ethics":"/2019/09/13/what-is-business-ethics/","job-interview-quiz":"/2019/09/13/job-interview-quiz/","unit-9-hr-training-what-is-hr-training":"/2016/10/28/unit-9-hr-training-what-is-hr-training/","unit-8-hr-performance-evaluation-vocabulary":"/2016/10/27/unit-8-hr-performance-evaluation-vocabulary/","unit-8-job-performance-evaluation":"/2016/10/27/unit-8-job-performance-evaluation/","unit-7-candidate-selection-process-most-popular-interview-questions":"/2016/10/26/unit-7-candidate-selection-process-most-popular-interview-questions/","short-essay-who-moved-my-cheese":"/2016/10/25/short-essay-on-who-moved-my-cheese-by-spencer-johnson/","unit-5-hr-planning-job-description-vs-job-specification":"/2016/10/24/unit-5-hr-planning-job-description-vs-job-specification/","unit-4-non-verbal-communication-hand-gestures-around-the-world":"/2016/10/24/unit-4-non-verbal-communication-hand-gestures-around-the-world/","unit-3-human-resources-management-modern-times":"/2016/10/20/unit-3-human-resources-management-modern-times/","unit-1-business-ethics-presentation":"/2016/10/20/unit-1-business-ethics-presentation/","unit-7-candidates-selection-process-job-interview-body-language":"/2016/10/20/unit-7-candidates-selection-process-job-interview-body-language/","unit-1-business-ethics-versus-profits":"/2016/10/19/unit-1-business-ethics-versus-profits/","unit-3-human-resources-management":"/2016/10/19/unit-3-human-resources-management/","unit-2-corporate-social-responsibility-sustainable-development":"/2016/10/19/unit-2-corporate-social-responsibility-sustainable-development/","unit-2-corporate-social-responsibility":"/2016/10/19/unit-2-corporate-social-responsibility/","unit-2-corporate-social-responsibility-sustainability-report":"/2016/10/19/unit-2-corporate-social-responsibility-sustainability-report/","introduction-to-human-resources-and-business-ethics":"/2016/10/19/introduction-to-human-resources-and-business-ethics/","welcome":"/2016/10/18/welcome/","el-aula-de-emprendimiento-del-ies-arca-real":"/2022/05/04/el-aula-de-emprendimiento-del-ies-arca-real/","herramienta-entrecomp":"/2022/07/12/herramienta-entrecomp/"};
 class Component extends DCLogic {
   state = { lang: 'es', view: 'home', slug: null, filter: null, query: '', menuOpen: false };
 
@@ -706,8 +707,11 @@ class Component extends DCLogic {
     const parts = []; let last = 0, m, k = 0;
     while ((m = re.exec(text))) {
       if (m.index > last) parts.push(text.slice(last, m.index));
-      const ext = /^https?:/.test(m[2]);
-      parts.push(h('a', Object.assign({ key: 'l' + (k++), href: m[2],
+      let _href = m[2]; // permalink-map
+      const _pm = _href.match(/^#\/post\/([\w-]+)\/?$/);
+      if (_pm && PERMA[_pm[1]]) _href = PERMA[_pm[1]];
+      const ext = /^https?:/.test(_href);
+      parts.push(h('a', Object.assign({ key: 'l' + (k++), href: _href,
         style: { color: '#1F94A3', fontWeight: 700, textDecoration: 'underline', textUnderlineOffset: '2px' } }, ext ? { target: '_blank', rel: 'noopener' } : {}), m[1]));
       last = m.index + m[0].length;
     }
@@ -1277,6 +1281,7 @@ class Component extends DCLogic {
         title: p[lang].title,
         excerpt: p[lang].excerpt,
         img: IMG[p.slug] || 'images/classroom.jpg',
+        permalink: PERMA[p.slug] || ('#/post/' + p.slug),
         body: (p.body && (p.body[lang] || p.body.en || p.body.es)) || [p[lang].excerpt],
         types: tags.types,
         areas: tags.areas
@@ -1298,12 +1303,12 @@ class Component extends DCLogic {
         const cand = localized[q];
         if (cand.slug !== post.slug && _rel.indexOf(cand) === -1) _rel.push(cand);
       }
-      const _related = _rel.slice(0, 3).map(p => ({ slug: p.slug, title: p.title, img: p.img, date: p.date }));
+      const _related = _rel.slice(0, 3).map(p => ({ slug: p.slug, title: p.title, img: p.img, date: p.date, permalink: PERMA[p.slug] || ('#/post/' + p.slug) }));
       post = Object.assign({}, post, {
         note: '', hasNote: false,
         bodyEls: (post.body || []).map((b, i) => this._block(b, i)),
-        hasOlder: !!_older, olderSlug: _older ? _older.slug : '', olderTitle: _older ? _older.title : '',
-        hasNewer: !!_newer, newerSlug: _newer ? _newer.slug : '', newerTitle: _newer ? _newer.title : '',
+        hasOlder: !!_older, olderSlug: _older ? _older.slug : '', olderTitle: _older ? _older.title : '', olderPermalink: _older ? (PERMA[_older.slug] || ('#/post/' + _older.slug)) : '',
+        hasNewer: !!_newer, newerSlug: _newer ? _newer.slug : '', newerTitle: _newer ? _newer.title : '', newerPermalink: _newer ? (PERMA[_newer.slug] || ('#/post/' + _newer.slug)) : '',
         related: _related
       });
     }
