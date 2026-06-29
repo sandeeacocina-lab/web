@@ -563,6 +563,19 @@
       </div>
     </div>
 
+    <div class="sm-gut" style="max-width:860px;margin:0 auto;padding:10px 32px 64px;">
+      <div class="sm-reveal" style="font:700 12px 'Source Sans 3',sans-serif;letter-spacing:.2em;color:#E85C6C;margin-bottom:20px;">{{ t.talksLabel }}</div>
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <sc-for list="{{ t.talks }}" as="tk" hint-placeholder-count="4">
+          <div class="sm-reveal" style="border:1px solid #E1EEF1;border-left:3px solid #1F94A3;border-radius:10px;background:#F8FCFD;padding:20px 22px;">
+            <div style="font:700 12px 'Source Sans 3',sans-serif;letter-spacing:.04em;color:#E85C6C;margin-bottom:5px;">{{ tk.tag }}</div>
+            <div style="font:700 18px/1.3 'Zilla Slab',serif;color:#1F2A30;margin-bottom:8px;">{{ tk.title }}</div>
+            <p style="margin:0;font:400 15px/1.65 'Source Sans 3',sans-serif;color:#52606A;">{{ tk.desc }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+
     <!-- CONTACT -->
     <div style="background:#F4FAFB;border-top:1px solid #E1EEF1;">
       <div class="sm-reveal" style="max-width:760px;margin:0 auto;padding:60px 32px;">
@@ -1068,13 +1081,20 @@ class Component extends DCLogic {
         aboutHead: 'Profesora de FP, innovación educativa e IA',
         aboutParas: ["Soy profesora de Formación Profesional en la familia de Administración y Gestión. Licenciada en Administración y Dirección de Empresas y con un Grado Superior en Lenguas Aplicadas, hablo cuatro idiomas y comencé mi carrera en el sector privado antes de dedicarme a la enseñanza. Actualmente doy clase en el IES Ribera de Castilla, en Valladolid.","Mi forma de enseñar gira en torno al \"aprender haciendo\": la simulación empresarial, las competencias emprendedoras (marco europeo EntreComp), el bilingüismo entendido como inmersión real en la lengua y la integración de la inteligencia artificial y las herramientas digitales en el aula.","He sido Asesora Técnico Docente en el Centro de Apoyo a la Enseñanza, Digitalización, Innovación y Emprendimiento, dependiente de la Dirección General de Formación Profesional de Castilla y León, y formo parte de la comunidad EntreComp Champion. La European Training Foundation y la Comunidad EntreComp me han invitado a compartir mi metodología, y mis proyectos han participado en ferias y concursos nacionales e internacionales.","En este sitio comparto recursos, proyectos y reflexiones pensados para otros docentes: todo lo que voy aprendiendo al llevar la simulación, el emprendimiento y la inteligencia artificial al aula."],
         companies: [{"name":"DECASARRE SAS","url":"https://decasarre.com","school":"IES Arca Real","color":"#E85C6C","desc":"Producción y venta de quesos y productos gourmet de Castilla y León."},{"name":"Riberpublic SLS","url":"https://riberpublic.com","school":"IES Ribera de Castilla","color":"#279DAC","desc":"Publicidad, marketing y merchandising para empresas simuladas."},{"name":"TastyBox","url":"https://tbtastybox.com","school":"IES Ribera de Castilla","color":"#1F2A30","desc":"Cajas corporativas gourmet con productos de Castilla y León."}],
+        talksLabel: "PONENCIAS Y PARTICIPACIONES",
+        talks: [
+          {tag:'IV Foro de FP de Castilla y León · #cylskills2025', title:'Mesa redonda «El reto del desajuste de competencias»', desc:'Organizada por la Dirección General de Formación Profesional y Régimen Especial de la Junta de Castilla y León. Compartí la experiencia del IES Ribera de Castilla en el desarrollo de competencias técnicas, transversales y digitales del alumnado, especialmente a través de la simulación empresarial, el programa SEFED y la empresa simulada Riberpublic SLS.'},
+          {tag:'III Foro de FP · «Ecosistemas de competencias para el desarrollo regional»', title:'Ponencia sobre digitalización en FP, en formato holograma', desc:'Intervención sobre la digitalización en la Formación Profesional, impartida mediante formato de holograma, además de mi participación como moderadora de una mesa redonda sobre digitalización en FP.'},
+          {tag:'Curso «Competencias para la excelencia profesional: gestión de red»', title:'Organización y ponente de las cinco sesiones formativas', desc:'Impartidas en formato online a unos 150 docentes de centros de excelencia de Castilla y León, con el objetivo de crear una red de colaboración real entre los centros de excelencia profesional de la comunidad.'},
+          {tag:'I Jornada Virtual de Emprendimiento en Castilla y León', title:'Ponente: el aula de emprendimiento del IES Arca Real', desc:'Expliqué al profesorado de Castilla y León el trabajo desarrollado como coordinadora del aula de emprendimiento, el uso del marco europeo de competencia emprendedora EntreComp y la herramienta digital que desarrollé para evaluar las competencias emprendedoras del alumnado.'}
+        ],
         companiesLabel: "EMPRESAS SIMULADAS QUE HE DIRIGIDO",
         trajKicker: 'Mi trayectoria', trajHead: 'Del sector privado al aula que simula el mundo real', trajLead: 'Una idea fija recorre toda mi carrera: que se aprende haciendo.',
         timeline: [
           {phase:'Inicio', color:'#E85C6C', title:'Carrera en el sector privado', body:'Empiezo en la empresa antes de dar el salto a la docencia, una experiencia que marca mi forma práctica de enseñar.'},
           {phase:'Aula', color:'#279DAC', title:'Profesora de FP y empresa simulada', body:'Llevo la simulación empresarial, el bilingüismo como inmersión real y las competencias emprendedoras (EntreComp) al día a día del aula.'},
           {phase:'Sistema educativo', color:'#279DAC', title:'Asesora Técnico Docente · digitalización e innovación', body:'Apoyo a la enseñanza, la digitalización, la innovación y el emprendimiento en la FP de Castilla y León.'},
-          {phase:'Reconocimiento', color:'#E85C6C', title:'EntreComp Champion · ponente internacional', body:'La European Training Foundation y la Comunidad EntreComp me invitan a compartir mi metodología; mis proyectos participan en ferias y concursos nacionales e internacionales.'}
+          {phase:'Reconocimiento', color:'#E85C6C', title:'EntreComp Champion · MIE Expert · Community Innovator', body:'Reconocida como Microsoft Innovative Educator Expert (MIE Expert), EntreComp Champion y Community Innovator.'}
         ],
         socials: [
           { label: 'LinkedIn', url: 'https://www.linkedin.com/in/sandramangas/' },
@@ -1129,13 +1149,20 @@ class Component extends DCLogic {
         aboutHead: 'VET teacher, educational innovation & AI',
         aboutParas: ["I am a Vocational Education and Training (VET) teacher in the Business Administration and Management field. I hold a degree in Business Administration and Management and a Higher Degree in Applied Languages, I speak four languages, and I began my career in the private sector before becoming a teacher. I currently teach at IES Ribera de Castilla, in Valladolid, Spain.","My teaching revolves around \"learning by doing\": business simulation, entrepreneurial skills (the European EntreComp framework), bilingualism understood as real language immersion, and integrating artificial intelligence and digital tools into the classroom.","I have worked as a Teaching Support Advisor at the Centre for Teaching Support, Digitalization, Innovation and Entrepreneurship, under the Directorate-General for Vocational Training of Castilla y León, and I am part of the EntreComp Champion community. The European Training Foundation and the EntreComp Community have invited me to share my methodology, and my projects have taken part in national and international fairs and competitions.","On this site I share resources, projects and reflections designed for fellow teachers: everything I learn as I bring simulation, entrepreneurship and artificial intelligence into the classroom."],
         companies: [{"name":"DECASARRE SAS","url":"https://decasarre.com","school":"IES Arca Real","color":"#E85C6C","desc":"Production and sale of cheeses and gourmet products from Castilla y León."},{"name":"Riberpublic SLS","url":"https://riberpublic.com","school":"IES Ribera de Castilla","color":"#279DAC","desc":"Advertising, marketing and promotional merchandise for practice firms."},{"name":"TastyBox","url":"https://tbtastybox.com","school":"IES Ribera de Castilla","color":"#1F2A30","desc":"Gourmet corporate boxes with products from Castilla y León."}],
+        talksLabel: "TALKS & PARTICIPATION",
+        talks: [
+          {tag:'4th VET Forum of Castilla y León · #cylskills2025', title:'Panel "The challenge of the skills mismatch"', desc:'Organised by the Directorate-General for Vocational Training of the Castilla y León regional government. I shared IES Ribera de Castilla\'s experience in developing students\' technical, transversal and digital skills, especially through business simulation, the SEFED programme and the practice firm Riberpublic SLS.'},
+          {tag:'3rd VET Forum · "Skills ecosystems for regional development"', title:'Talk on digitalization in VET, delivered as a hologram', desc:'A talk on digitalization in Vocational Education and Training, delivered in hologram format, plus my role moderating a panel on digitalization in VET.'},
+          {tag:'Course "Skills for professional excellence: network management"', title:'Organiser and speaker across the five training sessions', desc:'Delivered online to around 150 teachers from centres of excellence in Castilla y León, aiming to build a real collaboration network between the region\'s centres of professional excellence.'},
+          {tag:'1st Virtual Entrepreneurship Conference in Castilla y León', title:'Speaker: the entrepreneurship classroom at IES Arca Real', desc:'I explained to teachers across Castilla y León my work coordinating the entrepreneurship classroom, the use of the European EntreComp framework, and the digital tool I built to assess students\' entrepreneurial competences.'}
+        ],
         companiesLabel: "PRACTICE FIRMS I HAVE RUN",
         trajKicker: 'My journey', trajHead: 'From the private sector to a classroom that simulates the real world', trajLead: 'One idea runs through my whole career: you learn by doing.',
         timeline: [
           {phase:'Start', color:'#E85C6C', title:'Career in the private sector', body:'I began in business before moving into teaching — an experience that shapes my hands-on way of teaching.'},
           {phase:'Classroom', color:'#279DAC', title:'VET teacher & practice firm', body:'I bring business simulation, bilingualism as real immersion and entrepreneurial skills (EntreComp) into everyday classroom life.'},
           {phase:'Education system', color:'#279DAC', title:'Teaching Support Advisor · digitalization & innovation', body:'Supporting teaching, digitalization, innovation and entrepreneurship in the VET system of Castilla y León.'},
-          {phase:'Recognition', color:'#E85C6C', title:'EntreComp Champion · international speaker', body:'The European Training Foundation and the EntreComp Community invite me to share my methodology; my projects take part in national and international fairs and competitions.'}
+          {phase:'Recognition', color:'#E85C6C', title:'EntreComp Champion · MIE Expert · Community Innovator', body:'Recognised as a Microsoft Innovative Educator Expert (MIE Expert), EntreComp Champion and Community Innovator.'}
         ],
         socials: [
           { label: 'LinkedIn', url: 'https://www.linkedin.com/in/sandramangas/' },
