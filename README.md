@@ -1,6 +1,7 @@
 # Sandra Mangas — Web
 
-Sitio estático (HTML + JavaScript, sin build). Bilingüe ES/EN, blog con etiquetas por tipo y área.#
+Sitio estático (HTML + JavaScript, sin build). Bilingüe ES/EN, blog con etiquetas por tipo y área.
+
 
 ## Publicar en GitHub Pages
 
