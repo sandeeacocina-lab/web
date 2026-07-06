@@ -775,14 +775,11 @@ class Component extends DCLogic {
   }
 
   componentDidUpdate() {
-    if (this._lastQuery !== this.state.query) {
-      this._lastQuery = this.state.query;
-      const root = document.querySelector('[data-screen-label="Sandra Mangas — sitio"]') || document.body;
-      root.classList.add('sm-armed');
-      requestAnimationFrame(() => {
-        document.querySelectorAll('.sm-reveal:not(.sm-in)').forEach(e => e.classList.add('sm-in'));
-      });
-    }
+    const root = document.querySelector('[data-screen-label="Sandra Mangas — sitio"]') || document.body;
+    root.classList.add('sm-armed');
+    requestAnimationFrame(() => {
+      document.querySelectorAll('.sm-reveal:not(.sm-in)').forEach(e => e.classList.add('sm-in'));
+    });
   }
 
   componentWillUnmount() {
