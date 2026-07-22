@@ -26,8 +26,7 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://sandramangas.com/#website","url":"https://sandramangas.com/","name":"Sandra Mangas","inLanguage":"es","description":"Recursos, proyectos y reflexiones sobre simulación empresarial, emprendimiento, digitalización e IA en la Formación Profesional.","publisher":{"@id":"https://sandramangas.com/#person"}},{"@type":"Person","@id":"https://sandramangas.com/#person","name":"Sandra Mangas","url":"https://sandramangas.com/","image":"https://sandramangas.com/images/portrait-coral.jpg","jobTitle":"Profesora de Formación Profesional","description":"Profesora de FP especializada en simulación empresarial, emprendimiento, competencia digital docente e inteligencia artificial aplicada al aula.","knowsAbout":["Formación Profesional","Simulación empresarial","Emprendimiento","EntreComp","Competencia digital docente","Inteligencia artificial en educación"]}]}
 </script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-27S0EYQ2MR"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-27S0EYQ2MR')</script>
+<script src="./privacy.js"></script>
 <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
 <script src="./support.js"></script>
@@ -683,17 +682,9 @@
       <div class="sm-reveal" style="max-width:760px;margin:0 auto;padding:60px 32px;">
         <h2 style="margin:0 0 10px;font:700 clamp(28px,4vw,40px) 'Zilla Slab',serif;color:#1F94A3;text-align:center;">{{ t.contactTitle }}</h2>
         <p style="margin:0 0 32px;font:400 16px/1.6 'Source Sans 3',sans-serif;color:#5A6B75;text-align:center;">{{ t.contactBody }}</p>
-        <form action="https://api.web3forms.com/submit" method="POST" onSubmit="{{ onFormSubmit }}" style="display:flex;flex-direction:column;gap:16px;">
-          <input type="hidden" name="access_key" value="8fe6d997-64ba-4a47-87d9-e3ae20900cb1">
-          <input type="hidden" name="subject" value="Nuevo mensaje desde sandramangas.com">
-          <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off">
-          <div style="display:flex;flex-wrap:wrap;gap:16px;">
-            <input class="sm-field" name="name" required style="flex:1 1 200px;" type="text" placeholder="{{ t.formName }}">
-            <input class="sm-field" name="email" required style="flex:1 1 200px;" type="email" placeholder="{{ t.formEmail }}">
-          </div>
-          <textarea class="sm-field" name="message" required rows="5" style="resize:vertical;" placeholder="{{ t.formMsg }}"></textarea>
-          <button type="submit" class="sm-pill" style="align-self:flex-start;border:none;display:inline-flex;background:#E85C6C;color:#FFFFFF;font:700 14px 'Source Sans 3',sans-serif;padding:14px 30px;border-radius:999px;cursor:pointer;">{{ t.formSend }}</button>
-        </form>
+        <div style="display:flex;justify-content:center;">
+          <a href="mailto:sandeeacocina@gmail.com" class="sm-pill" style="display:inline-flex;background:#E85C6C;color:#FFFFFF;text-decoration:none;font:700 14px 'Source Sans 3',sans-serif;padding:14px 30px;border-radius:999px;">{{ t.formSend }}</a>
+        </div>
       </div>
     </div>
   </div>
@@ -724,14 +715,7 @@
       <div style="background:#22343B;border-radius:8px;padding:24px 24px 26px;">
         <div style="font:700 19px/1.15 'Zilla Slab',serif;color:#FFFFFF;">{{ t.ctaTitle }}</div>
         <p style="margin:7px 0 15px;font:400 13px/1.5 'Source Sans 3',sans-serif;color:#9DACB3;">{{ t.footNewsBody }}</p>
-        <form action="https://api.web3forms.com/submit" method="POST" onSubmit="{{ onFormSubmit }}" style="display:flex;gap:8px;flex-wrap:wrap;">
-          <input type="hidden" name="access_key" value="8fe6d997-64ba-4a47-87d9-e3ae20900cb1">
-          <input type="hidden" name="subject" value="Nueva suscripción a la newsletter — sandramangas.com">
-          <input type="hidden" name="from_name" value="Newsletter sandramangas.com">
-          <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off">
-          <input name="email" required type="email" placeholder="{{ t.emailPh }}" style="flex:1 1 140px;min-width:0;background:#16242A;border:1px solid #33474E;border-radius:7px;padding:11px 13px;font:400 14px 'Source Sans 3',sans-serif;color:#E8EEF0;outline:none;">
-          <button type="submit" class="sm-btn" style="border:none;background:#E85C6C;color:#FFFFFF;border-radius:7px;padding:11px 20px;font:700 14px 'Source Sans 3',sans-serif;cursor:pointer;white-space:nowrap;">{{ t.sendBtn }}</button>
-        </form>
+        <a href="mailto:sandeeacocina@gmail.com" class="sm-btn" style="display:inline-flex;background:#E85C6C;color:#FFFFFF;text-decoration:none;border-radius:7px;padding:11px 20px;font:700 14px 'Source Sans 3',sans-serif;">sandeeacocina@gmail.com</a>
       </div>
     </div>
     <div class="sm-gut sm-footbar" style="max-width:1120px;margin:0 auto;padding:22px 32px 32px;border-top:1px solid #2E4047;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;align-items:center;font:600 13px 'Source Sans 3',sans-serif;color:#8B9BA2;">
@@ -739,7 +723,8 @@
       <div style="display:flex;gap:22px;align-items:center;flex-wrap:wrap;">
         <a href="#/about" class="sm-link" style="position:relative;cursor:pointer;color:#8B9BA2;text-decoration:none;">{{ t.talk }}</a>
         <a href="http://www.larecetadelafelicidad.com" target="_blank" rel="noopener" class="sm-link" style="position:relative;cursor:pointer;color:#8B9BA2;text-decoration:none;">{{ t.recipe }}</a>
-        <span style="opacity:.82;">{{ t.legal }}</span>
+        <a href="./privacidad/" class="sm-link" style="position:relative;cursor:pointer;color:#8B9BA2;text-decoration:none;">{{ t.legal }}</a>
+        <a href="./privacidad/#preferencias" data-cookie-settings class="sm-link" style="position:relative;cursor:pointer;color:#8B9BA2;text-decoration:none;">{{ t.cookies }}</a>
       </div>
     </div>
   </div>
@@ -829,34 +814,6 @@ class Component extends DCLogic {
     const sb = document.querySelector('[data-search]'); if (sb) sb.value = '';
     this.setState({ view, slug, filter, query: '' });
   }
-
-  onFormSubmit = (e) => {
-    e.preventDefault();
-    const form = e.target;
-    const es = this.state.lang !== 'en';
-    const okMsg = es ? '¡Mensaje enviado! Gracias, te responderé pronto.' : 'Message sent! Thank you, I\'ll reply soon.';
-    const errMsg = es ? 'No se pudo enviar. Inténtalo de nuevo o escríbeme por email.' : 'Could not send. Please try again or email me.';
-    const btn = form.querySelector('button[type="submit"]');
-    let status = form.querySelector('.sm-form-status');
-    if (!status) {
-      status = document.createElement('div');
-      status.className = 'sm-form-status';
-      status.style.cssText = 'flex-basis:100%;margin-top:4px;font:600 14px "Source Sans 3",sans-serif;';
-      form.appendChild(status);
-    }
-    const prev = btn ? btn.textContent : '';
-    if (btn) { btn.disabled = true; btn.style.opacity = '0.7'; btn.textContent = es ? 'Enviando…' : 'Sending…'; }
-    fetch('https://api.web3forms.com/submit', {
-      method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' }
-    })
-      .then(r => r.json())
-      .then(j => {
-        if (j && j.success) { status.style.color = '#1F8A5B'; status.textContent = okMsg; form.reset(); }
-        else { status.style.color = '#D2495C'; status.textContent = errMsg; }
-      })
-      .catch(() => { status.style.color = '#D2495C'; status.textContent = errMsg; })
-      .then(() => { if (btn) { btn.disabled = false; btn.style.opacity = '1'; btn.textContent = prev; } });
-  };
 
   _arm() {
     requestAnimationFrame(() => requestAnimationFrame(() => {
@@ -1238,11 +1195,11 @@ class Component extends DCLogic {
         moreAbout: 'Conóceme mejor',
         areas: ['Digitalización', 'Simulación empresarial', 'Emprendimiento', 'RRHH y RSC', 'Inteligencia Artificial'],
         portrait: 'RETRATO', imgSlot: 'IMAGEN DEL ARTÍCULO',
-        ctaTitle: 'Recibe nuevas ideas para tu aula',
-        ctaBody: 'Suscríbete y te aviso cuando publique nuevos proyectos, recursos e ideas sobre IA, simulación empresarial y emprendimiento.',
-        subscribe: 'SUSCRÍBETE', emailPh: 'Escribe tu email…', sendBtn: 'Enviar', footNewsBody: 'Te aviso cuando publique nuevos proyectos, recursos e ideas.',
+        ctaTitle: 'Contacto',
+        ctaBody: 'Puedes escribirme directamente por correo electrónico.',
+        subscribe: 'CONTACTO', emailPh: 'Correo electrónico', sendBtn: 'Escribir', footNewsBody: 'Para colaborar, preguntar o compartir ideas, escríbeme por correo.',
         talk: 'Hablemos', recipe: 'La receta de la felicidad',
-        copy: '© 2026 Sandra Mangas', legal: 'Privacidad · Aviso legal', footExplore: 'Explorar', footAreas: 'Áreas de trabajo', footBlurb: 'Recursos, proyectos y experiencias para transformar el aula con metodologías activas, simulación empresarial e inteligencia artificial.',
+        copy: '© 2026 Sandra Mangas', legal: 'Privacidad y cookies', cookies: 'Cambiar cookies', footExplore: 'Explorar', footAreas: 'Áreas de trabajo', footBlurb: 'Recursos, proyectos y experiencias para transformar el aula con metodologías activas, simulación empresarial e inteligencia artificial.',
         blogTitle: 'Blog', blogIntro: 'Un espacio donde comparto experiencias, ideas y recursos sobre cómo transformar la educación a través de nuevas metodologías, la tecnología y la inteligencia artificial. Aquí encontrarás artículos sobre proyectos de emprendimiento, el uso de la IA en el aula, actividades para desarrollar competencias y mucho más.',
         backToBlog: 'Volver al blog',
         aboutHead: 'Profesora de FP, innovación educativa e IA',
@@ -1281,8 +1238,8 @@ class Component extends DCLogic {
           { label: 'Instagram', url: 'https://www.instagram.com/sandeea/' },
           { label: 'La receta de la felicidad', url: 'http://www.larecetadelafelicidad.com' }
         ],
-        contactTitle: 'Hablemos', contactBody: 'Si quieres colaborar, preguntar o compartir ideas, escríbeme.',
-        formName: 'Nombre', formEmail: 'Correo electrónico', formMsg: 'Tu mensaje…', formSend: 'Enviar mensaje'
+        contactTitle: 'Hablemos', contactBody: 'Si quieres colaborar, preguntar o compartir ideas, escríbeme directamente por correo electrónico.',
+        formName: 'Nombre', formEmail: 'Correo electrónico', formMsg: 'Tu mensaje…', formSend: 'Escribirme por correo'
       },
       en: {
         navHome: 'Home', navBlog: 'Blog', navAbout: 'About', searchPh: 'Search…', searchEmpty: 'No articles found. Try another keyword.',
@@ -1326,11 +1283,11 @@ class Component extends DCLogic {
         moreAbout: 'Get to know me',
         areas: ['Digitalisation', 'Business Simulation', 'Entrepreneurship', 'HR & CSR', 'Artificial Intelligence'],
         portrait: 'PORTRAIT', imgSlot: 'ARTICLE IMAGE',
-        ctaTitle: 'Fresh ideas for your classroom',
-        ctaBody: 'Subscribe and I'+String.fromCharCode(39)+'ll let you know when I publish new projects, resources and ideas on AI, business simulation and entrepreneurship.',
-        subscribe: 'SUBSCRIBE', emailPh: 'Type your email…', sendBtn: 'Subscribe', footNewsBody: 'I'+String.fromCharCode(39)+'ll let you know when I publish new projects, resources and ideas.',
+        ctaTitle: 'Contact',
+        ctaBody: 'You can email me directly.',
+        subscribe: 'CONTACT', emailPh: 'Email address', sendBtn: 'Email me', footNewsBody: 'For collaborations, questions or ideas, send me an email.',
         talk: 'Talk to me', recipe: 'La receta de la felicidad',
-        copy: '© 2026 Sandra Mangas', legal: 'Privacy · Legal', footExplore: 'Explore', footAreas: 'Focus areas', footBlurb: 'Resources, projects and experiences to transform the classroom with active methodologies, business simulation and artificial intelligence.',
+        copy: '© 2026 Sandra Mangas', legal: 'Privacy and cookies', cookies: 'Cookie settings', footExplore: 'Explore', footAreas: 'Focus areas', footBlurb: 'Resources, projects and experiences to transform the classroom with active methodologies, business simulation and artificial intelligence.',
         blogTitle: 'Blog', blogIntro: 'A space where I share experiences, ideas, and resources on how to transform education through new methodologies, technology, and artificial intelligence. Here you will find articles on entrepreneurial projects, the use of AI in the classroom, activities for developing skills, and much more.',
         backToBlog: 'Back to the blog',
         aboutHead: 'VET teacher, educational innovation & AI',
@@ -1369,8 +1326,8 @@ class Component extends DCLogic {
           { label: 'Instagram', url: 'https://www.instagram.com/sandeea/' },
           { label: 'La receta de la felicidad', url: 'http://www.larecetadelafelicidad.com' }
         ],
-        contactTitle: 'Let’s talk', contactBody: 'If you’d like to collaborate, ask something or share ideas, drop me a line.',
-        formName: 'Name', formEmail: 'E-mail', formMsg: 'Your message…', formSend: 'Send message'
+        contactTitle: 'Let’s talk', contactBody: 'If you’d like to collaborate, ask something or share ideas, email me directly.',
+        formName: 'Name', formEmail: 'E-mail', formMsg: 'Your message…', formSend: 'Send me an email'
       }
     };
 
