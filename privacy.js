@@ -111,3 +111,30 @@
     showBanner();
   }
 })();
+
+// Shared editorial disclosure for static pages; the main app renders its own.
+(function () {
+  'use strict';
+  function addEditorialNote() {
+    var footer = document.querySelector('footer .foot');
+    if (!footer || footer.querySelector('[data-site-ai-note]')) return;
+    var note = document.createElement('p');
+    note.setAttribute('data-site-ai-note', '');
+    note.style.cssText = 'flex-basis:100%;margin:4px 0 0;font:400 13px/1.6 "Source Sans 3",system-ui,sans-serif;color:inherit;';
+    var es = document.createElement('span');
+    es.textContent = "En esta web utilizo inteligencia artificial para generar algunas imágenes y como apoyo editorial, siempre bajo mi criterio y revisión.";
+    if (document.getElementById('btn-en')) {
+      es.className = 'lang-es';
+      var en = document.createElement('span');
+      en.className = 'lang-en';
+      en.textContent = "On this website, I use artificial intelligence to generate some images and for editorial support, always guided by my own judgement and review.";
+      note.appendChild(es);
+      note.appendChild(en);
+    } else {
+      note.appendChild(es);
+    }
+    footer.appendChild(note);
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', addEditorialNote);
+  else addEditorialNote();
+})();
