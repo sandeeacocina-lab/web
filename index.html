@@ -779,14 +779,33 @@ class Component extends DCLogic {
   state = { lang: 'es', view: 'home', slug: null, filter: null, query: '', menuOpen: false };
 
   componentDidMount() {
+    const url = new URL(window.location.href);
+    const requestedLang = url.searchParams.get('lang');
+    let rememberedLang = 'es';
+    try { rememberedLang = localStorage.getItem('sm-post-lang') || 'es'; } catch (_) {}
+    this._setLanguage(requestedLang === 'es' || requestedLang === 'en' ? requestedLang : rememberedLang);
+    // A normal GET form also works as an entry point into the site's search.
+    const incomingQuery = (url.searchParams.get('q') || '').trim();
+    if (url.searchParams.has('q') || url.searchParams.has('lang')) {
+      url.searchParams.delete('q'); url.searchParams.delete('lang');
+      if (!url.hash && incomingQuery) url.hash = '/buscar/' + encodeURIComponent(incomingQuery);
+      window.history.replaceState(window.history.state, '', url.pathname + url.search + url.hash);
+    }
     this._onClick = (e) => {
       const lang = e.target.closest && e.target.closest('[data-lang]');
-      if (lang) { this.setState({ lang: lang.getAttribute('data-lang') }); }
+      if (lang) this._setLanguage(lang.getAttribute('data-lang'));
     };
     document.addEventListener('click', this._onClick);
     this._onInput = (e) => {
       const sb = e.target.closest && e.target.closest('[data-search]');
-      if (sb) this.setState({ query: sb.value });
+      if (sb) {
+        document.querySelectorAll('[data-search]').forEach(input => { if (input !== sb) input.value = sb.value; });
+        if (window.location.hash.indexOf('#/buscar/') === 0) {
+          const q = sb.value.trim();
+          window.history.replaceState(window.history.state, '', q ? '#/buscar/' + encodeURIComponent(q) : '#/blog');
+        }
+        this.setState({ query: sb.value });
+      }
     };
     document.addEventListener('input', this._onInput);
     this._onHash = () => { this.setState({ menuOpen: false }); this._applyHash(); };
@@ -846,15 +865,26 @@ class Component extends DCLogic {
     if (this._fb) clearTimeout(this._fb);
   }
 
+  _setLanguage(value) {
+    const lang = value === 'en' ? 'en' : 'es';
+    document.documentElement.lang = lang;
+    try { localStorage.setItem('sm-post-lang', lang); } catch (_) {}
+    this.setState({ lang });
+  }
+
   _applyHash() {
     const raw = (window.location.hash || '').replace(/^#\/?/, '');
-    let view = 'home', slug = null, filter = null;
-    if (raw.indexOf('post/') === 0) { view = 'post'; slug = raw.slice(5); }
+    let view = 'home', slug = null, filter = null, query = '';
+    if (raw.indexOf('buscar/') === 0) {
+      view = 'blog';
+      try { query = decodeURIComponent(raw.slice(7)).trim(); } catch (_) {}
+    }
+    else if (raw.indexOf('post/') === 0) { view = 'post'; slug = raw.slice(5); }
     else if (raw.indexOf('t/') === 0) { view = 'filter'; filter = { kind: 'type', key: decodeURIComponent(raw.slice(2)) }; }
     else if (raw.indexOf('a/') === 0) { view = 'filter'; filter = { kind: 'area', key: decodeURIComponent(raw.slice(2)) }; }
     else if (raw === 'blog' || raw === 'about') { view = raw; }
-    const sb = document.querySelector('[data-search]'); if (sb) sb.value = '';
-    this.setState({ view, slug, filter, query: '' });
+    document.querySelectorAll('[data-search]').forEach(input => { input.value = query; });
+    this.setState({ view, slug, filter, query });
   }
 
   _arm() {

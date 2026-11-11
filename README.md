@@ -22,3 +22,9 @@ Sitio estático (HTML + JavaScript, sin build). Bilingüe ES/EN, blog con etique
 - Las tipografías (Zilla Slab y Source Sans 3) se cargan desde Google Fonts, así que el navegador necesita conexión la primera vez.
 - La navegación usa rutas con `#` (por ejemplo `#/blog`, `#/t/juegos`), compatibles con hosting estático.
 - Para editar contenido (textos, artículos, imágenes), edita `index.html`.
+
+## Cabecera y pie de las entradas
+
+Las entradas con enlace permanente incluyen la navegación completa en su HTML. El panel de publicación usa la misma plantilla para las entradas nuevas. Para cambiar los textos o enlaces compartidos, edita `scripts/sync-article-shell.py` y ejecuta `python3 scripts/sync-article-shell.py`. No se modifican las redirecciones antiguas. El aspecto y el menú móvil se ajustan en `assets/article-shell.css` y `assets/article-shell.js`.
+
+El buscador de las entradas abre el índice del blog en `/#/buscar/…`; el idioma se recuerda tanto en el índice como en los artículos.
